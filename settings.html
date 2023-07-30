@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Extension Settings</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<style>
+     body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #77BB3F;
+      color: white;
+    }
+    a{
+      color: purple;
+      font-weight: bold;
+    }
+    /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.text-muted{
+  color: #000 !important;
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  color: darkred;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.description {
+  font-size: smaller;
+}
+
+</style>
+</head>
+<body class="p-4">
+    <div class="text-center">
+        <img src="logosmall.png" alt="Logo" class="img-fluid mx-auto d-block" style="max-height: 200px;">
+      </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1"></div> <!-- Empty column -->
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col  mt-3 mb-2 description">
+             This tool has been crafted with cutting-edge AI technology to help you generate effective proposals on Upwork, taking your freelance game to the next level.
+
+<br>The first thing you'll want to do is fill out the settings below, you can customize your proposal template, specify your skills and experience, and enter your GPT-3 API key.
+
+Once done with the settings, you're ready to roll! <br><br>Navigate to any job page or job application page on Upwork and click the ProposalPunch icon in your Chrome toolbar. Enter any job-specific input and click 'Generate AI Proposal'. The AI model will then provide you with a personalized proposal tailored to the specific job. If you wish, you can make any necessary tweaks to this proposal.
+
+<br><br><span style="font-size: larger; font-weight: bold;">Job hunting success awaits with ProposalPunch!</span>
+          </div>
+        </div>
+        <h2>Settings</h2>
+        <form>
+    <div class="form-group">
+        <label for="api-key">OpenAI API Key:</label>
+        <input type="text" class="form-control" id="api-key" placeholder="Enter your OpenAI API Key here">
+        <small id="api-key-help" class="form-text text-muted">You can create or view your API Key from 
+            your OpenAI account. <a href="https://platform.openai.com/account/api-keys" target="_blank">Create/View API keys here</a>.</small>
+      </div>
+      
+    <div class="form-group">
+      <label for="template">Proposal Template:</label>
+      <textarea class="form-control" id="template" rows="5" placeholder="Enter your proposal template here. Use {job_description} to refer to the specific job description and {skills} for your skills."></textarea>
+
+    </div>
+    <div class="form-group">
+        <label for="experience">Experience:</label>
+        <textarea class="form-control" id="experience" rows="5" placeholder="Enter your professional experience or bio here. For example, you can include your past job experiences, projects you've completed, qualifications, etc."></textarea>
+        <small id="experience-help" class="form-text text-muted">This is your chance to highlight your relevant experiences and qualifications. It will be used in the proposal to demonstrate your suitability for the job.</small>
+      </div>
+      
+    
+      <div class="form-group">
+        <label for="skills">Skills:</label>
+        <input type="text" class="form-control" id="skills" placeholder="Enter your skills here, separated by commas. For example: PHP, JavaScript, Python, SQL.">
+        <small id="skills-help" class="form-text text-muted">These are the skills that will be used in the proposal to demonstrate your expertise.</small>
+      </div>
+             
+    <div class="form-group">
+        <label for="tone">Proposal Tone:<i>(optional)</i></label>
+        <input type="text" class="form-control" id="tone" placeholder="Enter your desired proposal tone here">
+        <small id="tone-help" class="form-text text-muted">This is how you wish your proposals' tone to be. For example, you might input 'professional', 'friendly', 'enthusiastic', etc.</small>
+      </div>
+      
+    <button type="button" id="save" class="btn btn-primary">Save</button>
+    <button type="button" id="close" class="btn btn-danger"> <span aria-hidden="true">&times;</span></button>
+  </form>
+</div>
+<div class="col-md-1"></div> <!-- Empty column -->
+</div>
+</div>
+  <script src="settings.js"></script>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="closemodal">&times;</span>
+      <p>Please fill out all required fields.</p>
+    </div>
+  </div>
+  
+
+ 
+</body>
+</html>
